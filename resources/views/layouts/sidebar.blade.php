@@ -4,8 +4,8 @@
 
 <div class="sidebar" id="sidebar">
     <br><br><br>
-        <a href="/home" >
-            <img  class="logo" src="{{ asset('img/2.png') }}" />
+        <a href="#" >
+            <img  class="logo" src="" />
             <span >Landing-App</span>
         </a>
     
