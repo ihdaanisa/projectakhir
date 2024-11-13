@@ -1,5 +1,5 @@
 <div class="text-white text-xl font-bold">
-    <a href="/home" class="hover:underline">Landing-App</a>
+    <a href="{{ Auth::check() ? (Auth::user()->role == 'admin' ? '/admin-dashboard' : '/dashboard') : '/' }}" class="hover:underline">Landing-App</a>
 </div>
 
 <div class="relative">

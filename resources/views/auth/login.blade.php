@@ -62,6 +62,11 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+                                <!-- Button for Google Login -->
+                                <a href="auth/google" class="btn btn-danger" style="margin-top: 10px;">
+                                    {{ __('Login with Google') }}
+                                </a>
                             </div>
                         </div>
                     </form>

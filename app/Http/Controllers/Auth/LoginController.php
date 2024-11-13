@@ -40,12 +40,20 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        if ($user->role == 'admin') {         
-            return redirect()->route('dashboard.admin');
+        $credentials = $request->only('email', 'password');
+    
+        if (Auth::attempt($credentials)) {
+            // Cek peran pengguna dan arahkan ke halaman yang sesuai
+            if (auth()->user()->role == 'User') {
+                return redirect()->route('home');
+            } elseif (auth()->user()->role == 'Admin') {
+                return redirect()->route('home');
+            }
         }
-        
-        return redirect()->route('dashboard.user');
+    
+        return back()->withErrors(['email' => 'Email atau password salah.']);
     }
+    
 
     public function logout(Request $request)
     {
