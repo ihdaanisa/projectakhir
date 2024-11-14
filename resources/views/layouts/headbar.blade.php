@@ -14,7 +14,7 @@
     <div id="dropdownMenu" class="absolute right-0 hidden mt-2 w-48 bg-white rounded-md shadow-lg z-10">
         <div class="py-2">
             <!-- Link untuk Update Profil -->
-            <a href="#" class="block w-full text-left px-4 py-2 text-blue-500 hover:bg-gray-100 rounded">
+            <a href="/user/edit" class="block w-full text-left px-4 py-2 text-blue-500 hover:bg-gray-100 rounded">
                 Update Profil
             </a>
             <form action="{{ route('logout') }}" method="POST" style="margin: 0;">

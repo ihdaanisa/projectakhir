@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,6 +23,12 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 // Rute untuk login dengan Google
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+// Rute untuk auth jadi hanya bisa diakses jika login
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/user/edit', [UserController::class, 'edit'])->name('user.edit');
+    Route::put('/user/update', [UserController::class, 'update'])->name('user.update');
+});
 
 // Rute untuk admin dengan middleware auth dan role admin
 Route::group(['middleware' => ['auth', 'role:admin']], function () {

@@ -45,9 +45,9 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             // Cek peran pengguna dan arahkan ke halaman yang sesuai
             if (auth()->user()->role == 'User') {
-                return redirect()->route('home');
+                return redirect()->route('dashboard.user');
             } elseif (auth()->user()->role == 'Admin') {
-                return redirect()->route('home');
+                return redirect()->route('dashboard.admin');
             }
         }
     
