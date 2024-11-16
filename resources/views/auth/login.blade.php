@@ -139,7 +139,7 @@
                 <div class="login-divider my-3">or login with</div>
 
                 <div class="d-flex justify-content-center gap-3">
-                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-google"></i> Google</a>
+                    <a href="auth/google" class="btn btn-outline-secondary"><i class="bi bi-google"></i> Google</a>
                     <a href="#" class="btn btn-outline-secondary"><i class="bi bi-facebook"></i> Facebook</a>
                 </div>
 
