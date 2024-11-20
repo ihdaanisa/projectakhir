@@ -21,15 +21,14 @@ class RegisterController extends Controller
     // Proses registrasi
     public function register(Request $request)
     {
+        // Validasi data input
         $this->validator($request->all())->validate();
 
-        event(new Registered($user = $this->create($request->all())));
+        // Event setelah user terdaftar
+        event(new Registered($this->create($request->all())));
 
-        $this->guard()->login($user);
-
-        // Arahkan ke dashboard sesuai dengan role
-        return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+        // Arahkan ke halaman login
+        return redirect()->route('login')->with('success', 'Registrasi berhasil, silakan login.');
     }
 
     // Menangani pengalihan setelah registrasi
@@ -52,14 +51,14 @@ class RegisterController extends Controller
         ]);
     }
 
-    // Membuat user baru
+     // Membuat user baru
     protected function create(array $data)
     {
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'role' => 'user',
+            'role' => 'user', // Default role
         ]);
     }
 
