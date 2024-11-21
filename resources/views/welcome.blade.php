@@ -106,7 +106,7 @@
                 <a href="#" class="btn btn-primary">Get Started</a>
             </div>
             <div class="col-md-6 text-center">
-                <img src="path/to/image4.jpg" alt="Smart Builder" class="img-fluid rounded">
+            <img src="{{ asset('images/create.png') }}" alt="Facebook Icon">
             </div>
         </div>
     </div>
