@@ -17,29 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Custom Button Styles */
-        .btn-primary-custom {
-            background-color: #707070;
-            border-color: #c0a18a;
-            color: #fff;
-        }
-
-        .btn-primary-custom:hover {
-            background-color: #a58971;
-            border-color: #a58971;
-            color: #fff;
-        }
-
-        /* Consistent Font Styling */
         body {
             font-family: 'Poppins', sans-serif;
-        }
-        
-
-        .heading-text {
-            font-size: 2.5rem; /* Ukuran font */
-            font-weight: 700; /* Bold */
-            color: #a58971; /* Warna coklat */
         }
     </style>
 </head>
@@ -48,8 +27,8 @@
     <div class="row w-100">
         <!-- Login Form -->
         <div class="col-lg-6 bg-white p-5 d-flex flex-column">
-            <h2 class="mb-3 heading-text">Welcome</h2>
-            <h2 class="mb-3 heading-text">Back!</h2>
+            <h2 class="mb-3 text-uppercase fw-bold text-primary">Welcome</h2>
+            <h2 class="mb-3 text-uppercase fw-bold text-primary">Back!</h2>
             <p class="text-muted mb-4">Welcome Back! Glad to See You Again!</p>
             
             <form method="POST" action="{{ route('login') }}">
@@ -91,7 +70,7 @@
                     @endif
                 </div>
 
-                <button type="submit" class="btn btn-primary-custom w-100 mb-3">Sign In</button>
+                <button type="submit" class="btn w-100 mb-3" style="background-color: #739AE9; border-color: #739AE9; color: white;">Sign In</button>
 
                 <div class="d-flex align-items-center text-muted mb-3">
                     <hr class="flex-grow-1">
