@@ -111,6 +111,61 @@
         </div>
     </div>
 </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a Standout Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Pick a <span class="text-primary">Standout Template</span> for Your Website</h1>
+                <p class="text-muted">Choose from 100+ free website templates, customizable for any industry and designed to captivate your audience.</p>
+            </div>
+
+            <!-- Template Cards -->
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="path/to/portfolio-image.jpg" class="card-img-top rounded" alt="Portfolio Template">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Portfolio</h5>
+                            <p class="text-muted">Showcase your work with stunning portfolio templates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="path/to/business-image.jpg" class="card-img-top rounded" alt="Business Template">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Business</h5>
+                            <p class="text-muted">Build a professional website for your business.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <img src="path/to/blog-image.jpg" class="card-img-top rounded" alt="Blog Template">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Blog</h5>
+                            <p class="text-muted">Share your ideas and stories with beautifully designed blogs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
