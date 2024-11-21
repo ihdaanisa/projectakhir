@@ -18,22 +18,27 @@
 
 <!-- Top Navbar -->
 <nav class="navbar navbar-light bg-white border-bottom fixed-top">
-    <a class="navbar-brand ml-3" href="#">Dashboard</a>
+    <div class="d-flex">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <a class="navbar-brand ml-2" href="#">Templates</a>
+    </div>
     <div class="dropdown">
         <img src="{{ auth()->user()->profile_picture ? asset('storage/profile/' . auth()->user()->profile_picture) : 'https://via.placeholder.com/40' }}" 
              class="rounded-circle dropdown-toggle" id="profileDropdown" alt="Profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 40px; height: 40px;">
-             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-    <a class="dropdown-item" href="/user/edit">Account Settings</a>
-    <a class="dropdown-item" href="{{ route('logout') }}"
-       onclick="event.preventDefault();
-       document.getElementById('logout-form').submit();">
-        Sign Out
-    </a>
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-        @csrf
-    </form>
-</div>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+            <a class="dropdown-item" href="/user/edit">Account Settings</a>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+               document.getElementById('logout-form').submit();">
+                Sign Out
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        </div>
+    </div>
 </nav>
+
 
 <!-- Sidebar -->
 <div class="d-flex">
