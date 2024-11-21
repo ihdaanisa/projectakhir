@@ -28,3 +28,4 @@ class ResetPasswordController extends Controller
         return '/login';  // Atau arahkan ke halaman lain jika perlu
     }
 
+}
