@@ -137,7 +137,6 @@
                         <img src="path/to/portfolio-image.jpg" class="card-img-top rounded" alt="Portfolio Template">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Portfolio</h5>
-                            <p class="text-muted">Showcase your work with stunning portfolio templates.</p>
                         </div>
                     </div>
                 </div>
