@@ -22,7 +22,7 @@ class UserController extends Controller
             'address' => 'nullable|string|max:255',
             'gender' => 'nullable|string|in:male,female,other',
             'phone' => 'nullable|string|max:15',
-            'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         $user = Auth::user();
