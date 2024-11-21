@@ -39,7 +39,6 @@
     </div>
 </nav>
 
-
 <!-- Sidebar -->
 <div class="d-flex">
     <div class="bg-white border-right position-fixed h-100" style="width: 220px; top: 56px; left: 0;">
