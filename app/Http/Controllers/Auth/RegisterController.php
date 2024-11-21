@@ -72,4 +72,6 @@ class RegisterController extends Controller
     // {
     //     return '/dashboard';
     // }
+
 }
+
