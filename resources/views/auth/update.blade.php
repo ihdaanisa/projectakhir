@@ -42,12 +42,12 @@
     </div>
     <div class="dropdown">
         <img src="{{ auth()->user()->profile_picture ? asset('storage/profile/' . auth()->user()->profile_picture) : 'https://via.placeholder.com/40' }}" 
-             class="rounded-circle dropdown-toggle" id="profileDropdown" alt="Profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 40px; height: 40px;">
+            class="rounded-circle dropdown-toggle" id="profileDropdown" alt="Profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 40px; height: 40px;">
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
             <a class="dropdown-item" href="/user/edit">Account Settings</a>
             <a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-               document.getElementById('logout-form').submit();">
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
                 Sign Out
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -87,16 +87,17 @@
                 <!-- Profile Picture -->
                 <div class="form-group text-center">
                     <label for="profile_picture">
-                        <img src="{{ auth()->user()->profile_picture ? asset('storage/profile/' . auth()->user()->profile_picture) : asset('img/placeholder.png') }}"
-                             alt="Profile Picture"
-                             class="profile-picture"
-                             id="profilePicturePreview">
-                        <input type="file" id="profile_picture" name="profile_picture" class="d-none" accept="image/*">
+                        <img src="{{ $user->profile_picture ? asset('storage/profile/' . $user->profile_picture) : 'https://via.placeholder.com/40' }}"
+                            alt="Profile Picture"
+                            class="profile-picture"
+                            id="profilePicturePreview">
+
+                            <input type="file" id="profile_picture" name="profile_picture" style="display: none;">
                     </label>
                 </div>
 
                 <!-- First and Last Name -->
-                <div class="form-row">
+                {{-- <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="firstName">First Name</label>
                         <input type="text" class="form-control" id="firstName" name="name" value="{{ old('name', auth()->user()->name) }}" required>
@@ -105,8 +106,12 @@
                         <label for="lastName">Last Name</label>
                         <input type="text" class="form-control" id="lastName" name="last_name" value="{{ old('last_name', auth()->user()->last_name) }}">
                     </div>
-                </div>
+                </div> --}}
 
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $user->name) }}" required>
+                </div>
                 <!-- Email -->
                 <div class="form-group">
                     <label for="email">Email</label>

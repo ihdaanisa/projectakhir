@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','role','profile_picture', 'address', 'gender', 'phone', 'google_id',
+        'name', 'email', 'password', 'role', 'profile_picture', 'address', 'gender', 'phone', 'google_id',
     ];
 
     /**
@@ -38,4 +38,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get all projects created by the user.
+     */
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }
